@@ -1,0 +1,14 @@
+<!doctype html>
+<script src="../../resources/js/lib/angular/angular.js"></script>
+<script src="../../resources/js/controllers/AutocompleterController.js"></script>
+<body>
+<div ng-app="AutocompleterApp">
+    <div ng-controller="AutocompleterController">
+        Input word:<input list="autocompleteInput" type="" ng-model="inputWord" ng-change="findAutocomleteWords(inputWord)"/>
+        <datalist id="autocompleteInput">
+            <option ng-repeat="word in words" value="{{word}}">
+        </datalist>
+    </div>
+</div>
+</body>
+</html>
